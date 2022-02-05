@@ -1,25 +1,28 @@
-package string.change_upper_lower;
+package string.change_upper_lower
 
-import java.util.Scanner;
+import java.util.*
+import kotlin.jvm.JvmStatic
 
-public class Main {
-    public static void main(String[] args) {
-        Main T = new Main();
-        Scanner kb = new Scanner(System.in);
-        String str=kb.next();
-        System.out.print(T.solution(str));
-    }
-
-    public String solution(String str){
-        String answer = "";
-
-        for(char x : str.toCharArray()){
-            if (Character.isLowerCase(x)){
-                answer += Character.toUpperCase(x);
-            }else {
-                answer += Character.toLowerCase(x);
+class Main {
+    fun solution(str: String): String {
+        var answer = ""
+        for (x in str.toCharArray()) {
+            answer += if (Character.isLowerCase(x)) {
+                x.uppercaseChar()
+            } else {
+                x.lowercaseChar()
             }
         }
-        return answer;
+        return answer
+    }
+
+    companion object {
+        @JvmStatic
+        fun main(args: Array<String>) {
+            val T = Main()
+            val kb = Scanner(System.`in`)
+            val str = kb.next()
+            print(T.solution(str))
+        }
     }
 }

@@ -1,24 +1,29 @@
-package string.find_char;
+package string.find_char
 
-import java.util.Scanner;
+import java.util.*
+import kotlin.jvm.JvmStatic
 
-public class Main {
-    public static void main(String[] args) {
-        Main T = new Main();
-        Scanner kb = new Scanner(System.in);
-        String str=kb.next();
-        char c=kb.next().charAt(0);
-        System.out.print(T.solution(str, c));
+class Main {
+    fun solution(str: String, t: Char): Int {
+        var str = str
+        var t = t
+        var answer = 0
+        str = str.uppercase(Locale.getDefault())
+        t = t.uppercaseChar()
+        for (x in str.toCharArray()) {
+            if (x == t) answer++
+        }
+        return answer
     }
 
-    public int solution(String str, char t){
-        int answer=0;
-        str=str.toUpperCase();
-        t=Character.toUpperCase(t);
-
-        for(char x : str.toCharArray()){
-            if(x==t) answer++;
+    companion object {
+        @JvmStatic
+        fun main(args: Array<String>) {
+            val T = Main()
+            val kb = Scanner(System.`in`)
+            val str = kb.next()
+            val c = kb.next()[0]
+            print(T.solution(str, c))
         }
-        return answer;
     }
 }
