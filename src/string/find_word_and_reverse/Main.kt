@@ -21,6 +21,7 @@ class Main {
                 s[rt] = tem
                 lt++
                 rt--
+
             }
         }
 
