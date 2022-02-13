@@ -17,7 +17,8 @@ class Main {
 
     fun solution2(str: String): String {
         var answer = "YES"
-        var str2 = StringBuilder(str).toString()
+        str.uppercase(Locale.getDefault())
+        var str2 = StringBuilder(str).reverse().toString()
         if (str != str2){
             return "NO"
         }
