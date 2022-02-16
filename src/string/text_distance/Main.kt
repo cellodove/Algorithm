@@ -17,6 +17,7 @@ class Main {
                 p++
                 answer[i]=p
             }
+
         }
         p = 1000
 
