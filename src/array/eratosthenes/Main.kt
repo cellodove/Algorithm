@@ -16,6 +16,7 @@ internal class Main {
                 }
             }
         }
+
         return cnt
     }
 
