@@ -90,6 +90,31 @@ public class DoubleLinkedList<T> {
         }
     }
 
+    public boolean delNode(T data){
+        if (head == null){
+            return false;
+        }else if (this.head.data == data){
+            this.head = this.head.next;
+            this.head.prev = null;
+            return true;
+        }else {
+            Node<T> node = this.head;
+            while (node != null){
+                if (node.data == data){
+                    Node<T> nodePrev = node.prev; //찾은 노드의 앞노드
+
+                    nodePrev.next = node.next; //삭제할 노드의 앞부분 분리 후 연결
+                    node.next.prev = nodePrev; //삭제할 노드의 뒷부분 분리 후 연결
+                    return true;
+                }else {
+                    node = node.next;
+                }
+            }
+        }
+
+        return false;
+    }
+
     public void printAll(){
         if (this.head != null){
             Node<T> node = this.head;
