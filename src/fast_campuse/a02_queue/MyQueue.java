@@ -1,4 +1,4 @@
-package fast_campuse.queue;
+package fast_campuse.a02_queue;
 
 import java.util.ArrayList;
 

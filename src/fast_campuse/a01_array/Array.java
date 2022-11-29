@@ -1,4 +1,4 @@
-package fast_campuse.array;
+package fast_campuse.a01_array;
 
 public class Array {
 

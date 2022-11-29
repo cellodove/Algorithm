@@ -1,4 +1,4 @@
-package fast_campuse.stack;
+package fast_campuse.a03_stack;
 
 import java.util.ArrayList;
 
