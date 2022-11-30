@@ -97,6 +97,10 @@ public class DoubleLinkedList<T> {
             this.head = this.head.next;
             this.head.prev = null;
             return true;
+        }else if (this.tail.data == data){
+            this.tail = this.tail.prev;
+            this.tail.next = null;
+            return true;
         }else {
             Node<T> node = this.head;
             while (node != null){
@@ -111,7 +115,6 @@ public class DoubleLinkedList<T> {
                 }
             }
         }
-
         return false;
     }
 
@@ -134,7 +137,8 @@ public class DoubleLinkedList<T> {
         doubleLinkedList.addNode("4");
         doubleLinkedList.addNode("5");
 
-        doubleLinkedList.addNodeToFront("3.5","3");
+        doubleLinkedList.delNode("5");
+
         doubleLinkedList.printAll();
 
     }
