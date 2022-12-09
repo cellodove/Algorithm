@@ -11,6 +11,7 @@ public class SingleLinkedList <T>{
         }
     }
 
+    //데이터 추가
     public void addNode(T data){
         if (head == null){
             //헤드가 없으면 첫시작이라는뜻
@@ -22,17 +23,6 @@ public class SingleLinkedList <T>{
                 node = node.next;
             }
             node.next = new Node<>(data);
-        }
-    }
-
-    public void printAll(){
-        if (head != null){
-            Node<T> node = this.head;
-            System.out.println(node.data);
-            while (node.next != null){
-                node = node.next;
-                System.out.println(node.data);
-            }
         }
     }
 
@@ -50,6 +40,7 @@ public class SingleLinkedList <T>{
         return null;
     }
 
+    //데이터 중간 삽입
     public void addNodeInside(T data, T isData){
         Node<T> searchData = this.search(isData);
         if (searchData == null){
@@ -82,15 +73,27 @@ public class SingleLinkedList <T>{
         }
     }
 
-    public static void main(String[] args) {
-        SingleLinkedList<String> singleLinkedList = new SingleLinkedList<>();
-        singleLinkedList.addNode("1");
-        singleLinkedList.addNode("2");
-        singleLinkedList.addNode("3");
-        singleLinkedList.addNode("4");
-        singleLinkedList.addNode("5");
-        singleLinkedList.addNodeInside("3.5","1");
+    public void printAll(){
+        if (head != null){
+            Node<T> node = this.head;
+            System.out.println(node.data);
+            while (node.next != null){
+                node = node.next;
+                System.out.println(node.data);
+            }
+        }
+    }
 
-        singleLinkedList.printAll();
+    public static void main(String[] args) {
+        SingleLinkedList<Integer> singleLinkedList = new SingleLinkedList<>();
+        singleLinkedList.addNode(100);
+        singleLinkedList.addNode(50);
+        singleLinkedList.addNode(70);
+
+        singleLinkedList.search(70);
+
+        System.out.println(singleLinkedList.search(70).data);
+
+        //singleLinkedList.printAll();
     }
 }
