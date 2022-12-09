@@ -1,10 +1,10 @@
 package fast_campuse.a05_hash_table;
 
-public class MyHash2 {
+public class MyHashChaining {
 
     public Slot[] hashTable;
 
-    public MyHash2(Integer size){
+    public MyHashChaining(Integer size){
         this.hashTable = new Slot[size];
     }
 
@@ -60,7 +60,7 @@ public class MyHash2 {
     }
 
     public static void main(String[] args) {
-        MyHash2 myHash = new MyHash2(20);
+        MyHashChaining myHash = new MyHashChaining(20);
         myHash.saveData("kim","01011112222");
         myHash.saveData("kimm","01055556666");
         myHash.saveData("lee","01033334444");
