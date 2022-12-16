@@ -54,6 +54,16 @@ public class MyHeap {
         return true;
     }
 
+    public Integer pop1(){
+        if (this.heapArray == null){
+            return null;
+        }else {
+            return this.heapArray.get(1);
+        }
+    }
+
+
+
     public static void main(String[] args) {
 
         MyHeap heapTest = new MyHeap(15);
