@@ -8,7 +8,9 @@ public class InsertionSort {
     public ArrayList<Integer> sort(ArrayList<Integer> arrayList){
 
         for (int index = 0; index < arrayList.size(); index++){
-            for (int cursor = index + 1; cursor > 0; cursor--){ //index+1을 할필요는 없으나 하지않으면 무조건 시작의 한번 조건은 버려지기때문에 +1을 하여 하나의 조건도 버리지 않는다.
+            //index+1을 할필요는 없으나 하지않으면 무조건 시작의 한번 조건은 버려지기때문에 +1을 하여 하나의 조건도 버리지 않는다.
+            for (int cursor = index + 1; cursor > 0; cursor--){
+                //해당 위치값이 앞의 값보다 작다면 서로 교환한다.
                 if (arrayList.get(cursor) < arrayList.get(cursor-1)){
                     Collections.swap(arrayList,cursor,cursor-1);
                 }else {
