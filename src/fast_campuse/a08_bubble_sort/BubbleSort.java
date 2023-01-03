@@ -1,4 +1,4 @@
-package fast_campuse.bubble_sort;
+package fast_campuse.a08_bubble_sort;
 
 import java.util.ArrayList;
 import java.util.Collections;
