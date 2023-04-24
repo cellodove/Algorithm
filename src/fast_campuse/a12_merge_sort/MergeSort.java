@@ -1,8 +1,6 @@
 package fast_campuse.a12_merge_sort;
 
-import javax.swing.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class MergeSort {
     public void splitFunc(ArrayList<Integer> dataList){
