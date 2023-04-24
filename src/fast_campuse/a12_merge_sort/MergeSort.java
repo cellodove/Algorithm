@@ -66,10 +66,13 @@ public class MergeSort {
     }
 
 
-
-
     public static void main(String[] args) {
-        MergeSort mergeSort = new MergeSort();
-        mergeSort.splitFunc(new ArrayList<>(Arrays.asList(4,5,2,8,4,9)));
+        ArrayList<Integer> testData = new ArrayList<>();
+
+        for (int index = 0; index < 100; index++) {
+            testData.add((int)(Math.random() * 100));
+        }
+        MergeSort mSort = new MergeSort();
+        System.out.println(mSort.mergeSplitFunc(testData));
     }
 }
