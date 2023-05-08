@@ -3,9 +3,7 @@ package fast_campuse.a14_squential_search;
 import java.util.ArrayList;
 
 public class SequentialSearch {
-
     public Integer SearchNumberFun(ArrayList<Integer> integers, int searchNumber){
-
         for (int index = 0; index < integers.size(); index++){
             if (integers.get(index) == searchNumber){
                 return integers.get(index);
